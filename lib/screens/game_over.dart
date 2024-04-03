@@ -18,6 +18,11 @@ class GameOver extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
+            Text(
+              "score :${flappyBirdGame.bird.score}",
+              style: const TextStyle(
+                  fontSize: 60, color: Colors.white, fontFamily: Assets.fontStyle),
+            ),
             const Image(image: AssetImage(Assets.gameOver)),
             const SizedBox(height: 20),
             ElevatedButton(
@@ -25,7 +30,7 @@ class GameOver extends StatelessWidget {
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
                 child: const Text(
                   "Restart",
-                  style: TextStyle(fontSize: 20,color: Colors.white),
+                  style: TextStyle(fontSize: 20, color: Colors.white),
                 ))
           ],
         ),
@@ -37,6 +42,6 @@ class GameOver extends StatelessWidget {
     flappyBirdGame.bird.restartGame();
     flappyBirdGame.overlays.remove(id);
     flappyBirdGame.resumeEngine();
-
+    flappyBirdGame.bird.score = 0;
   }
 }

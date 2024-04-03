@@ -13,6 +13,8 @@ class Bird extends SpriteGroupComponent<BirdMovement>
     with HasGameRef<FlappyBirdGame>, CollisionCallbacks {
   Bird();
 
+  int score = 0;
+
   @override
   Future<void> onLoad() async {
     final upImage = await gameRef.loadSprite(Assets.birdUpFlap);
@@ -41,13 +43,12 @@ class Bird extends SpriteGroupComponent<BirdMovement>
   void _pauseGame() {
     gameRef.overlays.add(GameOver.id);
     gameRef.pauseEngine();
-    gameRef.isHit=true;
+    gameRef.isHit = true;
   }
+
   void restartGame() {
     position = Vector2(50, gameRef.size.y / 2 - size.y / 2);
-
   }
-
 
   void fly() {
     add(MoveByEffect(Vector2(0, Configuration.gravity),

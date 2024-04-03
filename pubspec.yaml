@@ -22,7 +22,11 @@ flutter:
   uses-material-design: true
 
   assets:
-   - assets/audio/
-   - assets/fonts/
-   - assets/images/
+    - assets/audio/
+    - assets/fonts/
+    - assets/images/
 
+  fonts:
+    - family: Game
+      fonts:
+        - asset: assets/fonts/Game.ttf
