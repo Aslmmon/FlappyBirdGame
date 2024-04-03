@@ -1,4 +1,5 @@
 import 'package:flame/game.dart';
+import 'package:flappybird/screens/game_over.dart';
 import 'package:flappybird/screens/main_menu.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,7 @@ void main() {
   runApp(GameWidget(game: flappyBirdGame, initialActiveOverlays: const [
     MainMenu.id
   ], overlayBuilderMap: {
-    MainMenu.id: (context, _) => MainMenu(flappyBirdGame: flappyBirdGame)
+    MainMenu.id: (context, _) => MainMenu(flappyBirdGame: flappyBirdGame),
+    GameOver.id: (context, _) => GameOver(flappyBirdGame: flappyBirdGame)
   }));
 }

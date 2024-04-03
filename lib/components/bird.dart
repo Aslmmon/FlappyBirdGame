@@ -4,6 +4,7 @@ import 'package:flame/effects.dart';
 import 'package:flappybird/configuration/Configuration.dart';
 import 'package:flappybird/flappyGame/Assets.dart';
 import 'package:flappybird/flappyGame/flabby_bird_game.dart';
+import 'package:flappybird/screens/game_over.dart';
 import 'package:flutter/widgets.dart';
 
 enum BirdMovement { up, middle, down }
@@ -38,8 +39,15 @@ class Bird extends SpriteGroupComponent<BirdMovement>
   }
 
   void _pauseGame() {
+    gameRef.overlays.add(GameOver.id);
     gameRef.pauseEngine();
+    gameRef.isHit=true;
   }
+  void restartGame() {
+    position = Vector2(50, gameRef.size.y / 2 - size.y / 2);
+
+  }
+
 
   void fly() {
     add(MoveByEffect(Vector2(0, Configuration.gravity),
