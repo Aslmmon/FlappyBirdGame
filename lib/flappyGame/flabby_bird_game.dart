@@ -3,6 +3,8 @@ import 'package:flappybird/components/Ground.dart';
 import 'package:flappybird/components/background.dart';
 import 'package:flappybird/components/bird.dart';
 
+import '../components/pipe_group.dart';
+
 class FlappyBirdGame extends FlameGame {
 
 
@@ -11,7 +13,8 @@ class FlappyBirdGame extends FlameGame {
     addAll([
       Background(),
       Ground(),
-      Bird()
+      Bird(),
+      pipeGroup()
     ]);
   }
 }
