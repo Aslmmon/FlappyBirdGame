@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flame/components.dart';
 import 'package:flappybird/components/Pipe.dart';
 import 'package:flappybird/configuration/Configuration.dart';
@@ -6,6 +8,7 @@ import 'package:flappybird/flappyGame/flabby_bird_game.dart';
 class pipeGroup extends PositionComponent with HasGameRef<FlappyBirdGame> {
   pipeGroup();
 
+  final _random = Random();
   @override
   Future<void> onLoad() async {
     position.x = gameRef.size.x;
