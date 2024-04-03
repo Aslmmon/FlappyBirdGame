@@ -8,6 +8,7 @@ import 'package:flappybird/flappyGame/flabby_bird_game.dart';
 enum PIPEPOSITION { top, bottom }
 
 class Pipe extends SpriteComponent with HasGameRef<FlappyBirdGame> {
+  @override
   final double height;
   final PIPEPOSITION pipeposition;
 

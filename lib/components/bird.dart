@@ -1,11 +1,9 @@
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:flame/effects.dart';
-import 'package:flame/flame.dart';
 import 'package:flappybird/configuration/Configuration.dart';
 import 'package:flappybird/flappyGame/Assets.dart';
 import 'package:flappybird/flappyGame/flabby_bird_game.dart';
-import 'package:flutter/animation.dart';
 import 'package:flutter/widgets.dart';
 
 enum BirdMovement { up, middle, down }
