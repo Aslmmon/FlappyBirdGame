@@ -1,3 +1,4 @@
+import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:flame/flame.dart';
 import 'package:flappybird/configuration/Configuration.dart';
@@ -10,10 +11,7 @@ class Pipe extends SpriteComponent with HasGameRef<FlappyBirdGame> {
   final double height;
   final PIPEPOSITION pipeposition;
 
-  Pipe({
-    required this.height,
-    required this.pipeposition
-  });
+  Pipe({required this.height, required this.pipeposition});
 
   @override
   Future<void> onLoad() async {
@@ -30,7 +28,7 @@ class Pipe extends SpriteComponent with HasGameRef<FlappyBirdGame> {
         sprite = Sprite(pipe);
         break;
     }
+
+    add(RectangleHitbox());
   }
-
-
 }
