@@ -13,7 +13,6 @@ class MainMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     flappyBirdGame.pauseEngine();
 
-
     return Scaffold(
       body: GestureDetector(
         onTap: () {
