@@ -38,7 +38,6 @@ class Bird extends SpriteGroupComponent<BirdMovement>
   void onCollisionStart(
       Set<Vector2> intersectionPoints, PositionComponent other) {
     super.onCollisionStart(intersectionPoints, other);
-    debugPrint("collision occuredd with $other");
     _gameOver();
   }
 

@@ -55,7 +55,7 @@ class FlappyBirdGame extends FlameGame with TapDetector, HasCollisionDetection {
   void update(double dt) {
     super.update(dt);
     interval.update(dt);
-    score.text = "score:  ${bird.score}";
+    score.text = "score : ${bird.score}";
   }
 
   @override

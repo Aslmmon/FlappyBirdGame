@@ -19,7 +19,7 @@ class GameOver extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              "score :${flappyBirdGame.bird.score}",
+              "score : ${flappyBirdGame.bird.score}",
               style: const TextStyle(
                   fontSize: 60, color: Colors.white, fontFamily: Assets.fontStyle),
             ),
