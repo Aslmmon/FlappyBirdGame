@@ -59,5 +59,5 @@ class FlappyBirdGame extends FlameGame with TapDetector, HasCollisionDetection {
   }
 
   @override
-  bool get debugMode => true;
+  bool get debugMode => false;
 }
